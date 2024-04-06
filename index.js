@@ -23,7 +23,7 @@ const imagesArray = [
 ];
 
 //Get all HTML Element through map function
-const imagesElement = imagesArray.map(
+const createImagesElement = imagesArray.map(
   (img) =>
     `<img src=${img} class="images w-full p-1 rounded-xl sm:w-1/3 md:w-1/4 h-52 cursor-pointer">`
 );
