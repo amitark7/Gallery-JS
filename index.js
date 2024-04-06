@@ -29,7 +29,7 @@ const createImagesElement = imagesArray.map(
 );
 
 //Insert Element in Image-container.
-imageContainer.innerHTML = imagesElement.join("");
+imageContainer.innerHTML = createImagesElement.join("");
 
 //Get all images from webpages.
 const images = document.querySelectorAll(".images");
@@ -68,18 +68,12 @@ backDrop.addEventListener("click", () => {
 
 //Create PrevClick button To handle slide backward
 const prevClick = () => {
-  if (slide === 0) {
-    slide = images.length - 1;
-  }
   slide--;
   imgSlide();
 };
 
 //Create nextClick button to hanlde slide forward
 const nextClick = () => {
-  if (slide > images.length - 1) {
-    slide = 0;
-  }
   slide++;
   imgSlide();
 };
