@@ -4,11 +4,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
 
 <body>
-
+    <div class="container mx-auto mt-2 h-screen relative 2xl:w-full">
+        <h1 class="text-3xl font-semibold tracking-wide text-center">Image Gallery</h1>
+        <div class="flex flex-wrap mt-2" id="image-container">
+        </div>
+        <div class="w-full h-screen absolute bg-black top-0 bg-opacity-70 hidden cursor-pointer pointer-events-auto"
+            id="back-drop"></div>
+        <div class="w-11/12 bg-white absolute top-36 left-4 border-8 hidden border-white pb-7 shadow-md overflow-hidden sm:w-10/12 sm:left-16 sm:pb-9 lg:w-8/12 lg:left-1/4 xl:w-6/12 xl:top-28"
+            id="popup-container">
+            <div class="w-full h-56 sm:h-72 md:h-80 xl:h-96">
+                <img src="" class="w-full h-full " alt="popupimages" id="popup-images">
+            </div>
+            <div class="buttons">
+                <button class="prev-button absolute bottom-px left-px text-base text-blue-600 font-semibold"
+                    onclick="prevClick()">
+                    &#171; Prev
+                </button>
+                <button class="next-button absolute bottom-px right-px text-base text-blue-600 font-semibold"
+                    onclick="nextClick()">
+                    Next &#187;
+                </button>
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
 </body>
 
 </html>
